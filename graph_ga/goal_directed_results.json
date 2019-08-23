@@ -1,876 +1,432 @@
 {
     "guacamol_version": "0.5.1",
     "benchmark_suite_version": "test",
-    "timestamp": "20190821-1131",
+    "timestamp": "20190821-1511",
     "results": [
         {
-            "benchmark_name": "SA_QED",
-            "score": 0.9479943502790498,
+            "benchmark_name": "Zaleplon MPO",
+            "score": 0.6112192444002781,
             "optimized_molecules": [
                 [
-                    "O=C(Nc1ccc(N2CC=NOC2)c(F)c1)c1cccs1",
-                    0.9483491732307654
+                    "CC(=O)N(Cc1ccnc2c1=CCOC=2)c1c(C)cccc1C#N",
+                    0.6324555320336759
                 ],
                 [
-                    "COc1ccccc1C(=O)N1CCCC1c1c(F)n[nH]c1C",
-                    0.9482624304331883
+                    "CC(=O)N(Cc1ccnc2c1CC(C#N)=C2)c1cccc(C)c1",
+                    0.6262753752089839
                 ],
                 [
-                    "NCC1=CCCc2cc(S(=O)(=O)c3cccs3)ccc21",
-                    0.9482552951976019
+                    "CC(=O)N(Cc1ccnc2c1C=C(C#N)C2)c1cccc(C)c1",
+                    0.6262753752089839
                 ],
                 [
-                    "Cc1ccnc(C)c1CC(=O)NC1=CCc2ccccc2C1=O",
-                    0.948190923981094
+                    "CC(=O)N(Cc1ccnc2coc(C)c12)c1c(C)cccc1C#N",
+                    0.624078267696069
                 ],
                 [
-                    "O=C(Nc1cccs1)C1CCCN(C(=O)c2ccco2)C1",
-                    0.9481272852469931
+                    "CC(=O)N(CC1C(O)=Nc2cc(C#N)ccc21)c1cccc(C)c1",
+                    0.624078267696069
                 ],
                 [
-                    "NCC1=C(F)Cc2cc(S(=O)(=O)c3ccccc3)ccc21",
-                    0.9481199725459896
+                    "CC(=O)N(CC1C(C#N)=Nc2ccc(O)cc21)c1cccc(C)c1",
+                    0.624078267696069
                 ],
                 [
-                    "NC(=O)C1CCN(c2nc(-c3cccc(F)c3)cs2)CC1",
-                    0.9481142213033364
+                    "CC(=O)N(CC1OC=Nc2ccc(C#N)cc21)c1cccc(C)c1",
+                    0.6208193510729725
                 ],
                 [
-                    "CC1=C(NC(=O)Cc2c(F)ccnc2C)C(=O)c2ccccc21",
-                    0.9481063567192641
+                    "CC(=O)N(CC1OC=Nc2cc(C#N)ccc21)c1cccc(C)c1",
+                    0.6208193510729725
                 ],
                 [
-                    "CC1=C(NC(=O)Cc2c(C)ccnc2C)C(=O)c2ccccc21",
-                    0.9480885693558214
+                    "CC(=O)c1cccc(N(Cc2ccnc3c2CC(C#N)=C3)C(C)=O)c1",
+                    0.6095716883136173
                 ],
                 [
-                    "Cc1ccc(CNC(=O)c2cc(C)on2)c(Br)c1",
-                    0.9480769748106358
+                    "CC(=O)c1cccc(N(Cc2ccnc3c2C=C(C#N)C3)C(C)=O)c1",
+                    0.6095716883136173
                 ],
                 [
-                    "Cc1cc(Br)cc(C)c1C(=O)NCc1ccon1",
-                    0.9480769748106358
+                    "CC(=O)c1cccc(N(Cc2c(C#N)cnc3c2CC=C3)C(C)=O)c1",
+                    0.6095716883136173
                 ],
                 [
-                    "Cc1cccc(-c2csc(N3CCC(C(N)=O)CC3)n2)c1",
-                    0.94805868372272
+                    "CC(=O)N(Cc1ccnc2c1=CCC=2)c1c(C)cccc1C#N",
+                    0.6037462962188547
                 ],
                 [
-                    "Cc1ccnc(C)c1CC(=O)NC1=C(F)c2ccccc2C1=O",
-                    0.9480569951083835
+                    "CC(=O)c1cccc(N(CC2C(C#N)=NC3=C2CC=C3)C(C)=O)c1",
+                    0.6006868920394728
                 ],
                 [
-                    "CC1=CCc2cc(NC(=O)Cn3cc(Cl)cn3)ccc2O1",
-                    0.9480192220603535
+                    "CC(=O)N(Cc1ccnc2cc(C#N)ccc12)C1=CC=C(O)C1C",
+                    0.6006868920394728
                 ],
                 [
-                    "O=C(NCc1ccc(F)cc1Cl)c1cnc(Cl)cn1",
-                    0.9479910103702103
+                    "CC(=O)N(Cc1cc(O)nc2c1C=C(C#N)C2)c1cccc(C)c1",
+                    0.6006868920394728
                 ],
                 [
-                    "O=C(NCc1ccc(Cl)cc1F)c1cnc(Cl)cn1",
-                    0.9479910103702103
+                    "CC(=O)N(Cc1cc(O)nc2c1=C(C#N)CC=2)c1cccc(C)c1",
+                    0.6006868920394728
                 ],
                 [
-                    "O=C(NCc1ccc(Cl)cc1Cl)c1cnc(F)cn1",
-                    0.9479910103702102
+                    "CC(=O)N(Cc1cc(O)nc2cccc(C#N)c12)c1cccc(C)c1",
+                    0.5987606923262347
                 ],
                 [
-                    "Cc1cc(C)cc(N2C(=O)CC=C2C(=O)Nc2cccnc2)c1",
-                    0.947988052768595
+                    "CC(=O)N(Cc1cc(O)nc2c(C#N)cccc12)c1cccc(C)c1",
+                    0.5987606923262347
                 ],
                 [
-                    "Cc1cccc(CC(=O)NC2COc3ccccc3C2=O)c1C",
-                    0.9479645207782088
+                    "COc1ccccc1N(Cc1ccnc2c1CC(C#N)=C2)C(C)=O",
+                    0.5976143046671968
                 ],
                 [
-                    "Cc1cccc(S(=O)(=O)NC(=O)c2cccc(Cl)c2)c1",
-                    0.9479380820623226
+                    "COc1ccccc1N(Cc1ccnc2c1C=C(C#N)C2)C(C)=O",
+                    0.5976143046671968
                 ],
                 [
-                    "Cc1ccc(S(=O)(=O)NC(=O)c2cccc(Cl)c2)cc1",
-                    0.9479380820623226
+                    "COc1ccc(N(Cc2ccnc3c2C=C(C#N)C3)C(C)=O)cc1",
+                    0.5976143046671968
                 ],
                 [
-                    "Cc1cc(C)cc(N2CC(C(=O)Nc3cccnc3)CC2=O)c1",
-                    0.9479255758312825
+                    "COC1=CCC(N(Cc2ccnc3cc(C#N)ccc23)C(C)=O)=C1",
+                    0.5976143046671968
                 ],
                 [
-                    "CC1=C(NS(=O)(=O)c2cccs2)C(=O)c2ccccc21",
-                    0.9479221988014757
+                    "CC(=O)N(Cc1ccnc2cc(C#N)ccc12)C1=CCOC=C1C",
+                    0.5976143046671968
                 ],
                 [
-                    "CC(=O)N1CCc2c(c(Nc3ccccc3)nn2C=CF)C1",
-                    0.947906411806693
+                    "CC(=O)N(CC1=CCC=C1)c1c(-c2cccc(C#N)c2)noc1C",
+                    0.5976143046671968
                 ],
                 [
-                    "CC=CSCC(=O)N1CCc2c([nH]c3ccccc23)C1=O",
-                    0.9478782700934081
+                    "CC(=O)N(CC1=CC=CC1)c1c(-c2cccc(C#N)c2)noc1C",
+                    0.5976143046671968
                 ],
                 [
-                    "Cc1cc(F)cc(N2C(=O)CC=C2C(=O)Nc2cccnc2)c1",
-                    0.9478350202353558
+                    "CC(=O)N(Cc1ccnc2cc(C#N)ccc12)c1cccc(C)c1",
+                    0.5934157559320272
                 ],
                 [
-                    "Cc1cc(C)cc(N2C(=O)C=CC2C(=O)Nc2cccnc2)c1",
-                    0.9478348343247716
+                    "CC(=O)c1cccc(N(Cc2c(C#N)[nH]c3c2CC=C3)C(C)=O)c1",
+                    0.5890150893739515
                 ],
                 [
-                    "Cc1ccc(CNC(=O)c2cc(F)on2)c(Br)c1",
-                    0.9478235071406145
+                    "CC(=O)N(Cc1ccnc2cc(C#N)ccc12)C1=CCC(O)=C1C",
+                    0.5890150893739515
                 ],
                 [
-                    "Cc1cc(C(=O)NCc2ccon2)c(F)cc1Br",
-                    0.9478235071406145
+                    "CC(=O)c1cccc(N(Cc2c(C)cccc2C#N)C(C)=O)c1",
+                    0.587950948605629
                 ],
                 [
-                    "Cc1cc(Br)cc(F)c1C(=O)NCc1ccon1",
-                    0.9478235071406145
+                    "CC(=O)N(Cc1ccnc2ccc(C#N)cc12)C1=C(O)CCC=C1",
+                    0.5860327153276884
                 ],
                 [
-                    "NCC1=CCCc2cc(S(=O)(=O)c3ccccc3)ccc21",
-                    0.9477377632308124
+                    "CC(=O)N(Cc1ccnc2cc(C#N)ccc12)C1=CCC(O)=CC1",
+                    0.5860327153276884
                 ],
                 [
-                    "CC1=C(CN)c2ccc(S(=O)(=O)c3ccccc3)cc2C1",
-                    0.9477377632308124
+                    "CC(=O)N(Cc1ccnc2cc(C#N)ccc12)C1=C(O)CCC=C1",
+                    0.5860327153276884
                 ],
                 [
-                    "O=C(Nc1cccs1)C1=CC=CN(C(=O)c2ccco2)C1",
-                    0.9477310260651993
+                    "CC(=O)N(CC1=CCC=C1)C1=CC(O)N=C1c1cccc(C#N)c1",
+                    0.5860327153276884
                 ],
                 [
-                    "O=C(c1cccnc1)N1CC(F)=C(Nc2cccc(F)c2)C1",
-                    0.9477205257437138
+                    "CC(=O)N(CC1=CC=CC1)C1=CC(O)N=C1c1cccc(C#N)c1",
+                    0.5860327153276884
                 ],
                 [
-                    "CC(=O)NC1(c2ccccc2)CCN(c2cccc(C)n2)CC1",
-                    0.9477014347391673
+                    "CC(=O)N(CC1=CCC=C1)C1=CCON=C1c1cccc(C#N)c1",
+                    0.5830951894845301
                 ],
                 [
-                    "CC(=O)NC1(c2ccccc2)CCN(c2ccc(C)nc2)CC1",
-                    0.9477014347391673
+                    "CC(=O)N(CC1=CC=CC1)C1=CCON=C1c1cccc(C#N)c1",
+                    0.5830951894845301
                 ],
                 [
-                    "CC(=O)NC1(c2ccc(C)cc2)CCN(c2cccnc2)CC1",
-                    0.9477014347391673
+                    "CC(=O)c1cccc(N(C)Cc2ccnc3c2CC(C#N)=C3)c1",
+                    0.5813583551993192
                 ],
                 [
-                    "NCC1=CCc2cc(S(=O)(=O)c3ccccc3F)ccc21",
-                    0.9476912439010575
+                    "CC(=O)c1cccc(N(C)Cc2ccnc3c2C=C(C#N)C3)c1",
+                    0.5813583551993192
                 ],
                 [
-                    "NCC1=CCc2cc(S(=O)(=O)c3cccc(F)c3)ccc21",
-                    0.9476912439010575
+                    "CC(=O)c1cccc(N(C)Cc2c(C#N)cnc3c2CC=C3)c1",
+                    0.5813583551993192
                 ],
                 [
-                    "Cc1cccc(S(=O)(=O)c2ccc3c(c2)CC=C3CN)c1",
-                    0.947678400543556
+                    "CC(=O)N(Cc1cc(O)nc2ccncc12)c1cccc(C)c1",
+                    0.5813583551993192
                 ],
                 [
-                    "Cc1ccccc1S(=O)(=O)c1ccc2c(c1)CC=C2CN",
-                    0.9476784005435559
+                    "CC(=O)N(CC1C(O)=Nc2cc(C#N)ccc21)c1ccccc1C",
+                    0.5773502691896257
                 ],
                 [
-                    "O=C(Nc1ccc(N2CCOCC2)c(F)c1)c1cccs1",
-                    0.9476552057395039
+                    "CC(=O)N(Cc1cc(O)nc2ccc(C#N)cc12)c1cccc(C)c1",
+                    0.5772240518878761
                 ],
                 [
-                    "Cc1cc(C)cc(N2CC(NC(=O)c3ccccc3)CC2=O)c1",
-                    0.9476409065313295
+                    "CC(=O)N(Cc1cc(O)nc2cc(C#N)ccc12)c1cccc(C)c1",
+                    0.5772240518878761
                 ],
                 [
-                    "O=C(NC1=CCN(c2snc3ccccc23)C1)C1CCC1",
-                    0.9475666803646815
+                    "CC(=O)N(CC1OC=Nc2cc(C#N)ccc21)c1ccccc1C",
+                    0.5744562646538028
                 ],
                 [
-                    "CC(=O)NC1(c2ccccc2F)CCN(c2cccnc2)CC1",
-                    0.9475325700296744
+                    "CC(=O)N(Cc1ccnc2ccccc12)c1c(C)cccc1C#N",
+                    0.5722694306279105
                 ],
                 [
-                    "CC(=O)NC1(c2ccc(F)cc2)CCN(c2cccnc2)CC1",
-                    0.9475325700296744
+                    "COc1cccc(N(CC2C(C#N)=NC3=C2CC=C3)C(C)=O)c1",
+                    0.5702021025867272
                 ],
                 [
-                    "O=C(c1ccncc1)N1CCCC(Nc2ccccc2F)C1",
-                    0.9475195519095682
+                    "CC(=O)N(Cc1ccnc2ccccc12)C1=CC=C(C#N)C1C",
+                    0.5702021025867272
                 ],
                 [
-                    "O=C(c1cccnc1)N1CCCC(Nc2cccc(F)c2)C1",
-                    0.9475195519095682
+                    "CC(=O)N(Cc1ccnc2ccccc12)C1=C(C)CC=C1C#N",
+                    0.5702021025867272
                 ],
                 [
-                    "O=C(c1cccnc1)N1CCCC(Nc2ccc(F)cc2)C1",
-                    0.9475195519095682
+                    "CC(=O)N(Cc1ccnc2cc(C#N)ccc12)C1=CCC(C)=C1",
+                    0.5702021025867272
                 ],
                 [
-                    "NCC1CC=Cc2cc(S(=O)(=O)c3ccccc3)ccc21",
-                    0.9475146464738151
+                    "CC(=O)N(Cc1ccnc2cc(C#N)ccc12)C1=CC=CC1C",
+                    0.5702021025867272
                 ],
                 [
-                    "CC1=Cc2cc(S(=O)(=O)c3ccccc3)ccc2C1CN",
-                    0.9475146464738151
+                    "CC(=O)N(Cc1ccnc2cc(C#N)ccc12)C1=CC=C(C)C1",
+                    0.5702021025867272
                 ],
                 [
-                    "O=C(NC1=CC=CN(C(=O)c2ccco2)C1)c1cccs1",
-                    0.9474870943738944
+                    "CC(=O)N(Cc1ccnc2cc(C#N)ccc12)C1=CC(C)C=C1",
+                    0.5702021025867272
                 ],
                 [
-                    "COc1ccccc1C(=O)N1CCCC1c1c(C)n[nH]c1C",
-                    0.9474829086258334
+                    "CC(=O)N(Cc1ccnc2cc(C#N)ccc12)C1=CC(C)=CC1",
+                    0.5702021025867272
                 ],
                 [
-                    "Cc1nccc(F)c1CC(=O)NC1=C(F)c2ccccc2C1=O",
-                    0.9474387132059657
+                    "CC(=O)N(Cc1ccnc2c1CC(C#N)=C2)c1ccccc1C",
+                    0.5702021025867272
                 ],
                 [
-                    "Cc1cc(C2CCCN(C(=O)Cc3ccccc3F)C2)n[nH]1",
-                    0.9474287736237679
+                    "CC(=O)N(Cc1ccnc2c1C=C(C#N)C2)c1ccccc1C",
+                    0.5702021025867272
                 ],
                 [
-                    "O=C(Nc1ccccc1)C1CCCN(C(=O)c2ccco2)C1",
-                    0.9474160588462426
+                    "CC(=O)N(Cc1ccnc2c1C=C(C#N)C2)c1ccc(C)cc1",
+                    0.5702021025867272
                 ],
                 [
-                    "CC1=C(NS(=O)(=O)c2cccc(C)c2)C(=O)c2ccccc21",
-                    0.9474085692018599
+                    "CC(=O)N(Cc1ccnc2c1=CCC=2C#N)c1ccccc1C",
+                    0.5702021025867272
                 ],
                 [
-                    "O=C(Nc1ccccc1)c1ccc(N2CCOCC2)c(F)c1",
-                    0.9473869405086353
+                    "CC(=O)N(Cc1c(C#N)cnc2c1CC=C2)c1ccccc1C",
+                    0.5702021025867272
                 ],
                 [
-                    "O=C(CSC1CCC1)N1CCc2c([nH]c3ccccc23)C1=O",
-                    0.9473750420132877
+                    "CC(=O)N(CC1OC=NC2=C1CC=C2C#N)c1cccc(C)c1",
+                    0.5702021025867272
                 ],
                 [
-                    "O=C1C(NS(=O)(=O)c2ccccc2)=C(F)c2ccccc21",
-                    0.9472818784662239
+                    "CC(=O)N(CC1OC=NC2=C1CC(C#N)=C2)c1cccc(C)c1",
+                    0.5702021025867272
                 ],
                 [
-                    "CC(=O)N1CCc2c(c(Nc3ccc(F)cc3)nn2C2CC2)C1",
-                    0.9472729058713983
+                    "CC(=O)N(CC1OC=NC2=C1C=C(C#N)C2)c1cccc(C)c1",
+                    0.5702021025867272
                 ],
                 [
-                    "O=C(NC1CCN(c2ccc3ccccc3n2)CC1)C1CCC1",
-                    0.9472654178755147
+                    "CC(=O)N(Cc1cc(O)nc2ccccc12)c1cccc(C#N)c1C",
+                    0.5664873913656124
                 ],
                 [
-                    "CC(=O)N1CCc2c(c(Nc3ccccc3)nn2C2CC2)C1",
-                    0.9472368260407209
+                    "CC(=O)N(Cc1cc(O)nc2ccccc12)c1c(C)cccc1C#N",
+                    0.5664873913656124
                 ],
                 [
-                    "CC1=C(NS(=O)(=O)c2ccccc2)C(=O)c2ccccc21",
-                    0.9471952550496553
+                    "CC(=O)N(Cc1cc(O)nc2c(C#N)cccc12)c1ccccc1C",
+                    0.5664873913656124
                 ],
                 [
-                    "O=C(NCc1ccon1)c1ccc(Br)cc1F",
-                    0.9471180517973787
+                    "CC(=O)C(=O)c1cccc(N(C)Cc2ccnc3c2C=C(C#N)C3)c1",
+                    0.5664873913656124
                 ],
                 [
-                    "O=C(NCc1ccccc1Br)c1cc(F)on1",
-                    0.9471180517973787
+                    "CC(=O)N(c1c(-c2cccc(C#N)c2)noc1C)C1C=CC=C1C",
+                    0.565685424949238
                 ],
                 [
-                    "Cc1cccc(S(=O)(=O)NC2=CCc3ccccc3C2=O)c1",
-                    0.9471077906050477
+                    "CC(=O)N(Cc1cc(O)nc2ccccc12)C1=CC=C(C#N)C1C",
+                    0.565685424949238
                 ],
                 [
-                    "Cc1ccc(NC(=O)C2CCCN(C(=O)c3ccco3)C2)cc1",
-                    0.9470871257093768
+                    "CC(=O)N(Cc1cc(O)nc2ccccc12)C1=CC(C)C(C#N)=C1",
+                    0.565685424949238
                 ],
                 [
-                    "Cc1ccccc1CC(=O)N1CCC=C(c2cc(F)[nH]n2)C1",
-                    0.947070995177465
+                    "CC(=O)N(C1=CC=CC1C)c1c(-c2cccc(C#N)c2)noc1C",
+                    0.565685424949238
                 ],
                 [
-                    "Cc1cc(F)cc(N2CC(NC(=O)c3ccccc3)CC2=O)c1",
-                    0.9470688200737507
+                    "CC(=O)C1C=c2ncc(C#N)c(Nc3cccc(C)c3)c2=CC1O",
+                    0.565685424949238
                 ],
                 [
-                    "CC(=O)N1CCc2c(c(Nc3cccc(C)c3)nn2C2CC2)C1",
-                    0.9470657107673631
+                    "COc1ccccc1N(Cc1ccnc2ccc(C#N)cc12)C(C)=O",
+                    0.5636478376880855
                 ],
                 [
-                    "CC(=O)N1CCc2c(c(Nc3ccc(C)cc3)nn2C2CC2)C1",
-                    0.9470657107673631
+                    "COc1ccccc1N(Cc1ccnc2cc(C#N)ccc12)C(C)=O",
+                    0.5636478376880855
                 ],
                 [
-                    "O=C(Cc1ccccc1F)N1CCC=C(c2cc(F)[nH]n2)C1",
-                    0.9470621307907404
+                    "COc1ccc(N(Cc2ccnc3ccc(C#N)cc23)C(C)=O)cc1",
+                    0.5636478376880855
                 ],
                 [
-                    "O=C(NS(=O)(=O)c1ccccc1F)c1cccc(Cl)c1",
-                    0.9470476257403996
+                    "COc1ccc(N(Cc2ccnc3cc(C#N)ccc23)C(C)=O)cc1",
+                    0.5636478376880855
                 ],
                 [
-                    "O=C(NS(=O)(=O)c1ccc(F)cc1)c1cccc(Cl)c1",
-                    0.9470476257403996
+                    "CC(=O)N(Cc1ccccc1)c1c(-c2cccc(C#N)c2)noc1C",
+                    0.5636478376880855
                 ],
                 [
-                    "Cc1ccc(NC(=O)C2C=CC(=O)N2c2ccccc2F)cc1",
-                    0.9470464620398878
+                    "CC(=O)N(Cc1ccc(C)o1)C1=CCON=C1c1cccc(C#N)c1",
+                    0.5636478376880855
                 ],
                 [
-                    "Cc1ccccc1N1CC(C(=O)Nc2cccc(F)c2)=CC1=O",
-                    0.9470401398952316
+                    "CC(=O)N(c1c(-c2cccc(C#N)c2)noc1C)C1C=CCC=C1",
+                    0.5628780357842335
                 ],
                 [
-                    "Cc1cccc(NC(=O)C2=CC(=O)N(c3ccccc3F)C2)c1",
-                    0.9470401398952316
+                    "CC(=O)N(c1c(-c2cccc(C#N)c2)noc1C)C1C=CC=CC1",
+                    0.5628780357842335
                 ],
                 [
-                    "O=C(NCc1ccon1)c1ccc(Br)cc1Cl",
-                    0.9469817705246707
+                    "CC(=O)N(Cc1ccnc2ccc(C#N)cc12)C1C=CC=C(O)C1",
+                    0.5628780357842335
                 ],
                 [
-                    "O=C(Cc1ccccc1F)Nc1ccc2c(c1)OCCCO2",
-                    0.9469753949286638
+                    "CC(=O)N(C1=CCON=C1c1cccc(C#N)c1)C1C=CC=C1C",
+                    0.5628780357842335
                 ],
                 [
-                    "Cc1c(NC(=O)CN2CCCC(C)C2)ccc2nsnc12",
-                    0.9469007231689512
+                    "CC(=O)N(C1=CCON=C1c1cccc(C#N)c1)C1=C(C)CC=C1",
+                    0.5628780357842335
                 ],
                 [
-                    "CC=Cn1nc(Nc2ccccc2)c2c1CCN(C(C)=O)C2",
-                    0.94690010618135
+                    "CC(=O)N(C1=CCON=C1c1cccc(C#N)c1)C1=C(C)C=CC1",
+                    0.5628780357842335
                 ],
                 [
-                    "Cc1cccc2c1CC(NC(=O)Cn1cc(Cl)cn1)CC2",
-                    0.9468885714910372
+                    "CC(=O)N(C1=CCON=C1C1=CCC(C#N)=C1)c1cccc(C)c1",
+                    0.5628780357842335
                 ],
                 [
-                    "Cc1cc(F)cc(N2CC(C(=O)Nc3cccnc3)CC2=O)c1",
-                    0.9468790899855551
+                    "CC(=O)N(C1=CCON=C1C1=CC=C(C#N)C1)c1cccc(C)c1",
+                    0.5628780357842335
                 ],
                 [
-                    "Cc1cnc(C(=O)NCc2ccc(Cl)cc2Cl)cn1",
-                    0.9468674917406246
+                    "CC(=O)N(C1=CCON=C1C1=CC(C#N)=CC1)c1cccc(C)c1",
+                    0.5628780357842335
                 ],
                 [
-                    "Cc1cc(Cl)ccc1CNC(=O)c1cnc(Cl)cn1",
-                    0.9468674917406246
+                    "CC(=O)N(C1=CCCC=C1)c1c(-c2cccc(C#N)c2)noc1C",
+                    0.5628780357842335
                 ],
                 [
-                    "O=C(CN1C(=O)COc2ccccc21)Nc1ccc(Cl)cc1",
-                    0.9468646755711793
+                    "CC(=O)N(C1=CCC=CC1)c1c(-c2cccc(C#N)c2)noc1C",
+                    0.5628780357842335
                 ],
                 [
-                    "O=C(Nc1ccc(F)cc1)C1C=CC(=O)N1c1ccccc1F",
-                    0.9468558491793868
+                    "CC(=O)N(C1=CCC=C1C)C1=CCON=C1c1cccc(C#N)c1",
+                    0.5628780357842335
                 ],
                 [
-                    "Cc1ccc(NC2CCCN(C(=O)c3cccs3)C2)cn1",
-                    0.9468550263318182
+                    "CC(=O)N(C1=CCC(C)=C1)C1=CCON=C1c1cccc(C#N)c1",
+                    0.5628780357842335
                 ],
                 [
-                    "O=C(NC1CCCN(C(=O)c2cccs2)C1)c1ccccc1",
-                    0.9468548439555505
+                    "CC(=O)N(C1=CC=C(C)C1)C1=CCON=C1c1cccc(C#N)c1",
+                    0.5628780357842335
                 ],
                 [
-                    "O=C(Nc1cccc(F)c1)C1=CC(=O)N(c2ccccc2F)C1",
-                    0.946854242911925
+                    "CC(=O)N(C1=CC(C)=CC1)C1=CCON=C1c1cccc(C#N)c1",
+                    0.5628780357842335
                 ],
                 [
-                    "O=C(Nc1cccnc1)C1=CCC(=O)N1c1cc(F)cc(F)c1",
-                    0.9468524069503195
+                    "CC(=O)c1cccc(N(Cc2ccnc3c2CC=C3)C(C)=O)c1",
+                    0.559961122423343
                 ],
                 [
-                    "CC1=C(CN)c2ccc(S(=O)(=O)c3ccccc3C)cc2C1",
-                    0.9468481831412523
+                    "CC(=O)N(Cc1ccnc2ccc(O)cc12)c1cccc(C)c1",
+                    0.559961122423343
                 ],
                 [
-                    "CC1=C(CN)c2ccc(S(=O)(=O)c3cccc(C)c3)cc2C1",
-                    0.9468481831412523
+                    "CC(=O)N(Cc1ccnc2cc(O)ccc12)c1cccc(C)c1",
+                    0.559961122423343
                 ],
                 [
-                    "CCCNC(=O)c1cc2c(Br)nn(C)c2s1",
-                    0.9468479401852667
+                    "CC(=O)N(CC1OC=NC2=C1C=CC2C#N)c1cccc(C)c1",
+                    0.5590625960767223
                 ],
                 [
-                    "O=C(Nc1cccnc1)C1=CON(c2ccc(F)c(F)c2)C1",
-                    0.9468276048701426
+                    "CC(=O)N(CC1OC=NC2=C1C(C#N)C=C2)c1cccc(C)c1",
+                    0.5590625960767223
                 ],
                 [
-                    "O=C(Nc1cccnc1)C1=CON(c2cc(F)cc(F)c2)C1",
-                    0.9468276048701426
+                    "CC(=O)N(Cc1ccnc2cc(C#N)ccc12)C1=CCCC=C1",
+                    0.5561733643525362
                 ],
                 [
-                    "O=C(Nc1cccnc1)C1=CON(c2cc(F)ccc2F)C1",
-                    0.9468276048701425
+                    "CC(=O)N(Cc1ccnc2cc(C#N)ccc12)C1=CCC=CC1",
+                    0.5561733643525362
                 ],
                 [
-                    "Cc1cc(C(=O)NCc2ccccc2Br)no1",
-                    0.9468119647897792
+                    "CC(=O)N(Cc1ccnc2cc(C#N)ccc12)C1=CC=CCC1",
+                    0.5561733643525362
                 ],
                 [
-                    "Cc1cc(Br)ccc1C(=O)NCc1ccon1",
-                    0.9468119647897792
+                    "CC(=O)N(CC1=CC=CC1)C1=CCN=C1c1cccc(C#N)c1",
+                    0.5561733643525362
                 ]
             ],
-            "execution_time": 316.10840010643005,
+            "execution_time": 403.3858389854431,
             "number_scoring_function_calls": 100,
             "metadata": {
-                "top_1": 0.9483491732307654,
-                "top_10": 0.9481691202824688,
-                "top_100": 0.9474647573239154,
-                "internal_similarity_max": 0.8653846153846154,
-                "internal_similarity_mean": 0.1748483056700218,
+                "top_1": 0.6324555320336759,
+                "top_10": 0.621802316431303,
+                "top_100": 0.5793998847358556,
+                "internal_similarity_max": 0.8867924528301887,
+                "internal_similarity_mean": 0.3294295409854401,
                 "internal_similarity_histogram_density": [
                     [
-                        1.11,
-                        6.778,
-                        1.4259999999999995,
-                        0.3180000000000001,
-                        0.10200000000000002,
-                        0.09599999999999992,
-                        0.07200000000000001,
-                        0.06200000000000001,
-                        0.036000000000000004,
-                        0.0
-                    ]
-                ],
-                "internal_similarity_histogram_bins": [
-                    [
-                        0.0,
                         0.1,
-                        0.2,
-                        0.30000000000000004,
-                        0.4,
-                        0.5,
-                        0.6000000000000001,
-                        0.7000000000000001,
-                        0.8,
-                        0.9,
-                        1.0
-                    ]
-                ]
-            }
-        },
-        {
-            "benchmark_name": "QED",
-            "score": 0.9480023635453397,
-            "optimized_molecules": [
-                [
-                    "O=C(Cc1cccnc1)N1C=C(F)CC1c1cc(Cl)[nH]n1",
-                    0.9481895297071207
-                ],
-                [
-                    "Cc1ccc(C)c(C2CC(=O)N(c3cccnc3)CC2CN)c1",
-                    0.9481826169917784
-                ],
-                [
-                    "NCC1C=C(F)c2cc(S(=O)(=O)c3ccccc3)ccc21",
-                    0.9481537755114336
-                ],
-                [
-                    "CC1=CN(C(=O)Cc2cccc(F)c2)OC1c1cc(F)[nH]n1",
-                    0.9481446312081102
-                ],
-                [
-                    "O=C(c1cncs1)N1C=NC=C(Nc2ccc(F)cc2)C1",
-                    0.9481413132159588
-                ],
-                [
-                    "CC1=CCN(C(=O)Cc2ccc(C)nc2)C=C1c1cc(C)[nH]n1",
-                    0.9481315886483149
-                ],
-                [
-                    "CC1=CC(c2cc(C)[nH]n2)=CN(C(=O)Cc2cccc(C)n2)C1",
-                    0.9481315886483149
-                ],
-                [
-                    "CC1=CC(c2cc(C)[nH]n2)=CN(C(=O)Cc2ccc(C)nc2)C1",
-                    0.9481315886483149
-                ],
-                [
-                    "CC1=C(c2cc(C)[nH]n2)CN(C(=O)Cc2ccc(C)nc2)C=C1",
-                    0.9481315886483149
-                ],
-                [
-                    "NCC1=C(F)Cc2cc(S(=O)(=O)c3ccccc3)ccc21",
-                    0.9481199725459896
-                ],
-                [
-                    "Cc1cc(C(=O)NCc2ccon2)c(C)cc1Br",
-                    0.9480769748106358
-                ],
-                [
-                    "Cc1cc(Br)cc(C)c1C(=O)NCc1ccon1",
-                    0.9480769748106358
-                ],
-                [
-                    "Cc1ccc(CC(=O)N2C=CC=C(c3c(C)n[nH]c3C)C2)cn1",
-                    0.9480544344564247
-                ],
-                [
-                    "Cc1ccc(C(=O)Nc2cccc(C(=O)N3CCCC3)c2)cn1",
-                    0.9480100289944917
-                ],
-                [
-                    "O=C(NCc1ccc(F)cc1Cl)c1cnc(Cl)cn1",
-                    0.9479910103702103
-                ],
-                [
-                    "O=C(NCc1ccc(Cl)cc1F)c1ncc(Cl)cn1",
-                    0.9479910103702103
-                ],
-                [
-                    "CC1=CN(C(=O)Cc2cccc(C)n2)CC1c1c(C)n[nH]c1C",
-                    0.9479689748424842
-                ],
-                [
-                    "CC1=CN(C(=O)Cc2ccc(C)nc2)CC1c1c(C)n[nH]c1C",
-                    0.9479689748424842
-                ],
-                [
-                    "Cc1cccc(CC(=O)NC2COc3ccccc3C2=O)c1C",
-                    0.9479645207782088
-                ],
-                [
-                    "Cc1cccc(C(=O)N2C=NC=C(Nc3ccc(F)cc3)C2)n1",
-                    0.9479636666901421
-                ],
-                [
-                    "Cc1cccc(CC(=O)N2C=C(c3cc(C)[nH]n3)CC(C)C2)n1",
-                    0.9479409370404744
-                ],
-                [
-                    "Cc1ccc(NC(=O)C2CC(=O)N(c3ccc(C)nc3)C2)cc1",
-                    0.9479255758312825
-                ],
-                [
-                    "O=C(c1cncs1)N1CCCC(Nc2ccc(F)cc2)C1",
-                    0.9479103659251537
-                ],
-                [
-                    "CC(=O)N1CCc2c(c(Nc3ccccc3)nn2C=CF)C1",
-                    0.947906411806693
-                ],
-                [
-                    "O=C(Nc1ccccc1)C1C=NON(c2ccc(F)cc2)C1",
-                    0.9478841501654138
-                ],
-                [
-                    "Cc1ccc(C(=O)Nc2cccc(C(=O)N3C=CCC3)c2)cn1",
-                    0.9478654104678097
-                ],
-                [
-                    "Cc1ccc(CC(=O)N2C=CC(C)C(c3cc(C)[nH]n3)=C2)cn1",
-                    0.9478571127483264
-                ],
-                [
-                    "CC1=CN(C(=O)Cc2ccc(C)nc2)C=CC1c1cc(C)[nH]n1",
-                    0.947824091000399
-                ],
-                [
-                    "Cc1cc(Br)cc(F)c1C(=O)NCc1ccon1",
-                    0.9478235071406145
-                ],
-                [
-                    "O=C(c1cncs1)N1C=C(F)C(Nc2ccc(F)cc2)C1",
-                    0.9477919104940622
-                ],
-                [
-                    "O=C(c1cncs1)N1CC(F)=C(Nc2ccc(F)cc2)C1",
-                    0.9477860155770725
-                ],
-                [
-                    "O=C(Cc1cccc(F)c1)N1C=CC=C(c2cc(F)[nH]n2)O1",
-                    0.9477691063032063
-                ],
-                [
-                    "Cc1cccc(CC(=O)N2C=CC=C(c3cc(F)[nH]n3)O2)c1",
-                    0.9477415958876457
-                ],
-                [
-                    "Cc1cc(C2=CC=CN(C(=O)Cc3cccc(F)c3)O2)n[nH]1",
-                    0.9477415958876457
-                ],
-                [
-                    "NCC1=CCCc2cc(S(=O)(=O)c3ccccc3)ccc21",
-                    0.9477377632308124
-                ],
-                [
-                    "CC1=CN(C(=O)Cc2cncs2)CC1c1cc(Cl)[nH]n1",
-                    0.9477322577359178
-                ],
-                [
-                    "Cc1ccc(CC(=O)N2C=CC(C)C(c3cc(F)[nH]n3)=C2)cn1",
-                    0.9477157679303471
-                ],
-                [
-                    "CC1=CN(C(=O)Cc2ccc(C)nc2)C=CC1c1cc(F)[nH]n1",
-                    0.9477125109211895
-                ],
-                [
-                    "O=C(Cc1ccccc1)N1CC(F)=C(c2cc(Cl)[nH]n2)C1",
-                    0.9476967996580183
-                ],
-                [
-                    "O=C(Cc1cccnc1)N1C=CC=CC1c1cc(Cl)[nH]n1",
-                    0.9476581146361478
-                ],
-                [
-                    "O=C(Nc1ccc(N2CCOCC2)c(F)c1)c1cccs1",
-                    0.9476552057395039
-                ],
-                [
-                    "O=C(Nc1cccc(F)c1)C1CC(=O)N(c2cccs2)C1",
-                    0.9476425141506054
-                ],
-                [
-                    "O=C(Nc1ccc(F)cc1)C1CC(=O)N(c2cccs2)C1",
-                    0.9476425141506054
-                ],
-                [
-                    "Cc1cccc(CC(=O)N2C=C(c3cc(C)[nH]n3)C=C(F)C2)n1",
-                    0.9476186640088899
-                ],
-                [
-                    "Cc1ccc(CC(=O)N2C=CC(F)=C(c3cc(C)[nH]n3)C2)cn1",
-                    0.9476186640088898
-                ],
-                [
-                    "Cc1cccc(CC(=O)N2C=CC(F)C(c3cc(C)[nH]n3)=C2)n1",
-                    0.9476158602252903
-                ],
-                [
-                    "Cc1ccc(CC(=O)N2C=CC(F)C(c3cc(C)[nH]n3)=C2)cn1",
-                    0.9476158602252902
-                ],
-                [
-                    "Cc1ccc(NC2=CN=CN(C(=O)c3cncs3)C2)cc1",
-                    0.94760497167261
-                ],
-                [
-                    "Cc1cccc(CC(=O)N2C=C(F)C(c3cc(F)[nH]n3)C2)c1",
-                    0.9476032183903275
-                ],
-                [
-                    "Cc1ccc(CC(=O)N2C=C(F)C(c3cc(F)[nH]n3)C2)cc1",
-                    0.9476032183903275
-                ],
-                [
-                    "Cc1cc(C2CN(C(=O)Cc3cccc(F)c3)C=C2F)n[nH]1",
-                    0.9476032183903275
-                ],
-                [
-                    "Cc1cc(C2CN(C(=O)Cc3ccc(F)cc3)C=C2F)n[nH]1",
-                    0.9476032183903275
-                ],
-                [
-                    "O=C(Cc1cccc(F)c1)N1C=CCC(c2cc(F)[nH]n2)C1",
-                    0.94758532520936
-                ],
-                [
-                    "CC1=CN(C(=O)Cc2cccc(F)c2)CC1c1cc(F)[nH]n1",
-                    0.94758532520936
-                ],
-                [
-                    "CC1=CN(C(=O)Cc2ccc(F)cc2)CC1c1cc(F)[nH]n1",
-                    0.94758532520936
-                ],
-                [
-                    "CC1=CC(c2cc(F)[nH]n2)CN1C(=O)Cc1cccc(F)c1",
-                    0.94758532520936
-                ],
-                [
-                    "Cc1ccc(CC(=O)N2CCC=C(c3c(C)n[nH]c3C)C2)cn1",
-                    0.9475810235019044
-                ],
-                [
-                    "CC1=C(c2c(C)n[nH]c2C)CN(C(=O)Cc2cccc(C)n2)C1",
-                    0.9475810235019044
-                ],
-                [
-                    "CC1=C(c2c(C)n[nH]c2C)CN(C(=O)Cc2ccc(C)nc2)C1",
-                    0.9475810235019044
-                ],
-                [
-                    "Cc1c(F)nn(F)c1C(=O)NCc1ccc2c(c1)CCCC2",
-                    0.9475798970455195
-                ],
-                [
-                    "Cc1c(F)nn(F)c1C(=O)NCc1ccc2c(c1)CC(F)=C2",
-                    0.9475783036654807
-                ],
-                [
-                    "CC1CN(C(=O)Cc2cccc(F)c2)C=C1c1cc(F)[nH]n1",
-                    0.9475758416142603
-                ],
-                [
-                    "O=C(Cc1cccnc1)N1C=C(F)CC(c2cc(F)[nH]n2)=C1",
-                    0.9475746832870838
-                ],
-                [
-                    "CCC1C(=O)Nc2ccccc2N1C(=O)c1ccc(OC)cc1",
-                    0.9475567669528494
-                ],
-                [
-                    "CC1=CN(C(=O)Cc2cncs2)CC1c1c(C)n[nH]c1C",
-                    0.9475277395391424
-                ],
-                [
-                    "O=C(Cc1cccc(F)c1)N1C=C(F)C(c2cc(F)[nH]n2)C1",
-                    0.9475160623571622
-                ],
-                [
-                    "O=C(Cc1ccc(F)cc1)N1C=C(F)C(c2cc(F)[nH]n2)C1",
-                    0.9475160623571622
-                ],
-                [
-                    "NCC1CC=Cc2cc(S(=O)(=O)c3ccccc3)ccc21",
-                    0.9475146464738151
-                ],
-                [
-                    "CC1=CC(CN)c2ccc(S(=O)(=O)c3ccccc3)cc21",
-                    0.947514646473815
-                ],
-                [
-                    "O=C(Cc1ccccc1)N1C=C(c2cc(F)[nH]n2)CC(F)C1",
-                    0.9475123210233439
-                ],
-                [
-                    "CC1=CN(C(=O)Cc2cccc(C)n2)C=C(c2cc(F)[nH]n2)C1",
-                    0.9475120537853599
-                ],
-                [
-                    "CC1=CN(C(=O)Cc2ccc(C)nc2)C=C(c2cc(F)[nH]n2)C1",
-                    0.9475120537853599
-                ],
-                [
-                    "Cc1ccc(NC2=CN=CN(C(=O)c3cccc(C)n3)C2)cc1",
-                    0.9474937366929459
-                ],
-                [
-                    "O=S(=O)(Nc1cccnc1)c1ccc(Br)cc1",
-                    0.9474917091142527
-                ],
-                [
-                    "Cn1nc(F)c(F)c1C(=O)NCc1ccc(C(C)(C)C)cc1",
-                    0.9474910655579653
-                ],
-                [
-                    "O=C(Cc1cccnc1)N1C=CCC(c2cc(Cl)[nH]n2)C1",
-                    0.9474568153986095
-                ],
-                [
-                    "O=C(Cc1cccnc1)N1C=CC(c2cc(Cl)[nH]n2)CC1",
-                    0.9474568153986095
-                ],
-                [
-                    "CC1=CN(C(=O)Cc2cccnc2)CC1c1cc(Cl)[nH]n1",
-                    0.9474568153986095
-                ],
-                [
-                    "O=C(Cc1cncs1)N1C=CC=C(c2cc(Cl)[nH]n2)C1",
-                    0.9474542208589345
-                ],
-                [
-                    "Cc1ccc(C2CN(C(=O)Cc3ccc(C)nc3)C(=O)N2)cc1",
-                    0.9474476608182592
-                ],
-                [
-                    "CC1=CCN(C(=O)Cc2ccc(C)nc2)C=C1c1cc(F)[nH]n1",
-                    0.947441852702605
-                ],
-                [
-                    "CC1=CC(c2cc(F)[nH]n2)=CN(C(=O)Cc2cccc(C)n2)C1",
-                    0.947441852702605
-                ],
-                [
-                    "CC1=CC(c2cc(F)[nH]n2)=CN(C(=O)Cc2ccc(C)nc2)C1",
-                    0.947441852702605
-                ],
-                [
-                    "CC1=C(c2cc(F)[nH]n2)CN(C(=O)Cc2ccc(C)nc2)C=C1",
-                    0.947441852702605
-                ],
-                [
-                    "O=C(Cc1ccccc1)N1C=CC(F)C(c2cc(F)[nH]n2)=C1",
-                    0.9474198191905988
-                ],
-                [
-                    "O=C(Cc1ccccc1)N1C=C(c2cc(F)[nH]n2)C=C(F)C1",
-                    0.9474194671483478
-                ],
-                [
-                    "Cc1ccc(F)cc1C1CC(=O)N(c2cccnc2)CC1CN",
-                    0.9473948674871955
-                ],
-                [
-                    "Cc1ccc(F)c(C2CC(=O)N(c3cccnc3)CC2CN)c1",
-                    0.9473948674871955
-                ],
-                [
-                    "O=C(NCc1ccc2c(c1)CCCC2)c1c(F)c(F)nn1F",
-                    0.9473899776103349
-                ],
-                [
-                    "CC1=Cc2cc(CNC(=O)c3c(C)c(F)nn3F)ccc2C1",
-                    0.9473638183504177
-                ],
-                [
-                    "CC1=CN(C(=O)Cc2cncs2)CC(c2c(C)n[nH]c2C)=C1",
-                    0.947335964285384
-                ],
-                [
-                    "Cc1cccc(CC(=O)N2CC(F)=C(c3cc(F)[nH]n3)C2)c1",
-                    0.9473273460260322
-                ],
-                [
-                    "Cc1ccc(CC(=O)N2CC(F)=C(c3cc(F)[nH]n3)C2)cc1",
-                    0.9473273460260322
-                ],
-                [
-                    "Cc1cc(C2=C(F)CN(C(=O)Cc3cccc(F)c3)C2)n[nH]1",
-                    0.9473273460260322
-                ],
-                [
-                    "Cc1cc(C2=C(F)CN(C(=O)Cc3ccc(F)cc3)C2)n[nH]1",
-                    0.9473273460260322
-                ],
-                [
-                    "Cc1cccc(CC(=O)N2C=C(c3cc(F)[nH]n3)C(F)C2)c1",
-                    0.9473226763655099
-                ],
-                [
-                    "Cc1cc(C2=CN(C(=O)Cc3cccc(F)c3)CC2F)n[nH]1",
-                    0.9473226763655099
-                ],
-                [
-                    "Cc1cc(C2=CN(C(=O)Cc3ccc(F)cc3)CC2F)n[nH]1",
-                    0.9473226763655099
-                ],
-                [
-                    "O=C(Cc1ccccc1)N1CCCC(c2cc(Cl)[nH]n2)C1",
-                    0.9473126366601214
-                ],
-                [
-                    "CC1=CC(Nc2ccc(F)cc2)CN1C(=O)c1cncs1",
-                    0.9473007311101274
-                ]
-            ],
-            "execution_time": 300.0414619445801,
-            "number_scoring_function_calls": 100,
-            "metadata": {
-                "top_1": 0.9481895297071207,
-                "top_10": 0.9481458193773651,
-                "top_100": 0.9476717415515331,
-                "internal_similarity_max": 0.8372093023255814,
-                "internal_similarity_mean": 0.23515626090503924,
-                "internal_similarity_histogram_density": [
-                    [
-                        0.588,
-                        4.666,
-                        2.1719999999999993,
-                        1.4060000000000004,
-                        0.6780000000000002,
-                        0.2599999999999998,
-                        0.13400000000000004,
-                        0.05200000000000001,
-                        0.04400000000000001,
+                        0.334,
+                        4.699999999999998,
+                        2.956000000000001,
+                        0.8920000000000002,
+                        0.5439999999999996,
+                        0.3400000000000001,
+                        0.11000000000000003,
+                        0.024000000000000004,
                         0.0
                     ]
                 ],

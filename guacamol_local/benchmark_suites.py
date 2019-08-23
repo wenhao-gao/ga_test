@@ -143,8 +143,8 @@ def goal_directed_suite_v3() -> List[GoalDirectedBenchmark]:
 
 def goal_directed_suite_test() -> List[GoalDirectedBenchmark]:
     return [
-        sa_qed_benchmark(),
-        qed_benchmark()
+        qed_benchmark(),
+        zaleplon_with_other_formula()
     ]
 
 

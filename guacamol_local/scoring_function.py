@@ -265,7 +265,13 @@ class ScoringFunctionSAWrapper(ScoringFunction):
 
     def score(self, smiles):
         raw_score = self.scoring_function.score(smiles)
-        mod_score = self.sa_modifier(smiles, raw_score)
+        try:
+            mod_score = self.sa_modifier(smiles, raw_score)
+        except:
+            if isinstance(raw_score, list):
+                mod_score = [0 for _ in range(len(raw_score))]
+            elif isinstance(raw_score, float):
+                mod_score = 0
         return mod_score
 
     def score_list(self, smiles_list):

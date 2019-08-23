@@ -12,52 +12,54 @@ import joblib
 import numpy as np
 from guacamol_local.assess_goal_directed_generation import assess_goal_directed_generation
 from guacamol_local.goal_directed_generator import GoalDirectedGenerator
-from guacamol_local.scoring_function import ScoringFunction
+from guacamol_local.scoring_function import ScoringFunction, ScoringFunctionSAWrapper
 from guacamol_local.utils.chemistry import canonicalize
 from guacamol_local.utils.helpers import setup_default_logger
+from guacamol_local.sa_modifier import LinearModifier, SAScoreModifier, SCScoreModifier, SmilesModifier
 from joblib import delayed
 from rdkit import Chem
 from rdkit.Chem.rdchem import Mol
 
 from graph_ga import crossover as co, mutate as mu
+from graph_ga.goal_directed_generation import make_mating_pool, reproduce
 
 
-def make_mating_pool(population_mol: List[Mol], population_scores, offspring_size: int):
-    """
-    Given a population of RDKit Mol and their scores, sample a list of the same size
-    with replacement using the population_scores as weights
-
-    Args:
-        population_mol: list of RDKit Mol
-        population_scores: list of un-normalised scores given by ScoringFunction
-        offspring_size: number of molecules to return
-
-    Returns: a list of RDKit Mol (probably not unique)
-
-    """
-    # scores -> probs
-    sum_scores = sum(population_scores)
-    population_probs = [p / sum_scores for p in population_scores]
-    mating_pool = np.random.choice(population_mol, p=population_probs, size=offspring_size, replace=True)
-    return mating_pool
-
-
-def reproduce(mating_pool, mutation_rate):
-    """
-
-    Args:
-        mating_pool: list of RDKit Mol
-        mutation_rate: rate of mutation
-
-    Returns:
-
-    """
-    parent_a = random.choice(mating_pool)
-    parent_b = random.choice(mating_pool)
-    new_child = co.crossover(parent_a, parent_b)
-    if new_child is not None:
-        new_child = mu.mutate(new_child, mutation_rate)
-    return new_child
+# def make_mating_pool(population_mol: List[Mol], population_scores, offspring_size: int):
+#     """
+#     Given a population of RDKit Mol and their scores, sample a list of the same size
+#     with replacement using the population_scores as weights
+#
+#     Args:
+#         population_mol: list of RDKit Mol
+#         population_scores: list of un-normalised scores given by ScoringFunction
+#         offspring_size: number of molecules to return
+#
+#     Returns: a list of RDKit Mol (probably not unique)
+#
+#     """
+#     # scores -> probs
+#     sum_scores = sum(population_scores)
+#     population_probs = [p / sum_scores for p in population_scores]
+#     mating_pool = np.random.choice(population_mol, p=population_probs, size=offspring_size, replace=True)
+#     return mating_pool
+#
+#
+# def reproduce(mating_pool, mutation_rate):
+#     """
+#
+#     Args:
+#         mating_pool: list of RDKit Mol
+#         mutation_rate: rate of mutation
+#
+#     Returns:
+#
+#     """
+#     parent_a = random.choice(mating_pool)
+#     parent_b = random.choice(mating_pool)
+#     new_child = co.crossover(parent_a, parent_b)
+#     if new_child is not None:
+#         new_child = mu.mutate(new_child, mutation_rate)
+#     return new_child
 
 
 def score_mol(mol, score_fn):
@@ -79,9 +81,20 @@ def sanitize(population_mol):
     return new_population
 
 
-class GB_GA_Generator(GoalDirectedGenerator):
+class SA_GB_GA_Generator(GoalDirectedGenerator):
 
-    def __init__(self, smi_file, population_size, offspring_size, generations, mutation_rate, n_jobs=-1, random_start=False, patience=5):
+    def __init__(self,
+                 smi_file,
+                 population_size,
+                 offspring_size,
+                 generations,
+                 mutation_rate,
+                 n_jobs=-1,
+                 random_start=False,
+                 patience=5,
+                 sa=None,
+                 mu=3,
+                 sigma=1):
         self.pool = joblib.Parallel(n_jobs=n_jobs)
         self.smi_file = smi_file
         self.all_smiles = self.load_smiles_from_file(self.smi_file)
@@ -91,6 +104,9 @@ class GB_GA_Generator(GoalDirectedGenerator):
         self.mutation_rate = mutation_rate
         self.random_start = random_start
         self.patience = patience
+        self.sa = sa
+        self.mu = mu
+        self.sigma = sigma
 
     def load_smiles_from_file(self, smi_file):
         with open(smi_file) as f:
@@ -106,6 +122,8 @@ class GB_GA_Generator(GoalDirectedGenerator):
     def generate_optimized_molecules(self, scoring_function: ScoringFunction, number_molecules: int,
                                      starting_population: Optional[List[str]] = None) -> List[str]:
 
+        sa_scoring_function = ScoringFunctionSAWrapper(scoring_function, SAScoreModifier(mu=self.mu, sigma=self.sigma))
+
         if number_molecules > self.population_size:
             self.population_size = number_molecules
             print(f'Benchmark requested more molecules than expected: new population is {number_molecules}')
@@ -116,12 +134,12 @@ class GB_GA_Generator(GoalDirectedGenerator):
             if self.random_start:
                 starting_population = np.random.choice(self.all_smiles, self.population_size)
             else:
-                starting_population = self.top_k(self.all_smiles, scoring_function, self.population_size)
+                starting_population = self.top_k(self.all_smiles, sa_scoring_function, self.population_size)
 
         # select initial population
-        population_smiles = heapq.nlargest(self.population_size, starting_population, key=scoring_function.score)
+        population_smiles = heapq.nlargest(self.population_size, starting_population, key=sa_scoring_function.score)
         population_mol = [Chem.MolFromSmiles(s) for s in population_smiles]
-        population_scores = self.pool(delayed(score_mol)(m, scoring_function.score) for m in population_mol)
+        population_scores = self.pool(delayed(score_mol)(m, sa_scoring_function.score) for m in population_mol)
 
         # evolution: go go go!!
         t0 = time()
@@ -144,7 +162,7 @@ class GB_GA_Generator(GoalDirectedGenerator):
             t0 = time()
 
             old_scores = population_scores
-            population_scores = self.pool(delayed(score_mol)(m, scoring_function.score) for m in population_mol)
+            population_scores = self.pool(delayed(score_mol)(m, sa_scoring_function.score) for m in population_mol)
             population_tuples = list(zip(population_scores, population_mol))
             population_tuples = sorted(population_tuples, key=lambda x: x[0], reverse=True)[:self.population_size]
             population_mol = [t[1] for t in population_tuples]
@@ -173,6 +191,65 @@ class GB_GA_Generator(GoalDirectedGenerator):
         return [Chem.MolToSmiles(m) for m in population_mol][:number_molecules]
 
 
+def bo_main(mu=None, sigma=None):
+
+    smiles_file = '/Users/gaowh/PycharmProjects/ga_test/data/guacamol_v1_valid.smiles'
+    seed = 0
+    population_size = 100
+    offspring_size = 200
+    mutation_rate = 0.01
+    generations = 1000
+    n_jobs = -1
+    random_start = False
+    output_dir = None
+    patience = 5
+    suite = 'test'
+    sa = None
+
+    #
+    # parser = argparse.ArgumentParser()
+    # parser.add_argument('--smiles_file', default='/Users/gaowh/PycharmProjects/ga_test/data/guacamol_v1_valid.smiles')
+    # parser.add_argument('--seed', type=int, default=0)
+    # parser.add_argument('--population_size', type=int, default=100)
+    # parser.add_argument('--offspring_size', type=int, default=200)
+    # parser.add_argument('--mutation_rate', type=float, default=0.01)
+    # parser.add_argument('--generations', type=int, default=1000)
+    # parser.add_argument('--n_jobs', type=int, default=-1)
+    # parser.add_argument('--random_start', action='store_true')
+    # parser.add_argument('--output_dir', type=str, default=None)
+    # parser.add_argument('--patience', type=int, default=5)
+    # parser.add_argument('--suite', default='test')
+    # parser.add_argument('--sa', type=str, default=None)
+    # parser.add_argument('--mu', type=float, default=3)
+    # parser.add_argument('--sigma', type=float, default=1)
+
+    np.random.seed(seed)
+
+    setup_default_logger()
+
+    if output_dir is None:
+        output_dir = os.path.dirname(os.path.realpath(__file__))
+
+    # save command line args
+    # with open(os.path.join(output_dir, 'sa_goal_directed_params.json'), 'w') as jf:
+    #     json.dump(vars(), jf, sort_keys=True, indent=4)
+
+    optimiser = SA_GB_GA_Generator(smi_file=smiles_file,
+                                population_size=population_size,
+                                offspring_size=offspring_size,
+                                generations=generations,
+                                mutation_rate=mutation_rate,
+                                n_jobs=n_jobs,
+                                random_start=random_start,
+                                patience=patience,
+                                sa=sa,
+                                mu=mu,
+                                sigma=sigma)
+
+    json_file_path = os.path.join(output_dir, 'sa_goal_directed_results.json')
+    assess_goal_directed_generation(optimiser, json_output_file=json_file_path, benchmark_version=suite)
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--smiles_file', default='/Users/gaowh/PycharmProjects/ga_test/data/guacamol_v1_valid.smiles')
@@ -186,6 +263,9 @@ def main():
     parser.add_argument('--output_dir', type=str, default=None)
     parser.add_argument('--patience', type=int, default=5)
     parser.add_argument('--suite', default='test')
+    parser.add_argument('--sa', type=str, default=None)
+    parser.add_argument('--mu', type=float, default=3)
+    parser.add_argument('--sigma', type=float, default=1)
 
     args = parser.parse_args()
 
@@ -197,19 +277,20 @@ def main():
         args.output_dir = os.path.dirname(os.path.realpath(__file__))
 
     # save command line args
-    with open(os.path.join(args.output_dir, 'goal_directed_params.json'), 'w') as jf:
+    with open(os.path.join(args.output_dir, 'sa_goal_directed_params.json'), 'w') as jf:
         json.dump(vars(args), jf, sort_keys=True, indent=4)
 
-    optimiser = GB_GA_Generator(smi_file=args.smiles_file,
+    optimiser = SA_GB_GA_Generator(smi_file=args.smiles_file,
                                 population_size=args.population_size,
                                 offspring_size=args.offspring_size,
                                 generations=args.generations,
                                 mutation_rate=args.mutation_rate,
                                 n_jobs=args.n_jobs,
                                 random_start=args.random_start,
-                                patience=args.patience)
+                                patience=args.patience,
+                                sa=args.sa)
 
-    json_file_path = os.path.join(args.output_dir, 'goal_directed_results.json')
+    json_file_path = os.path.join(args.output_dir, 'sa_goal_directed_results.json')
     assess_goal_directed_generation(optimiser, json_output_file=json_file_path, benchmark_version=args.suite)
 
 
